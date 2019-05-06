@@ -1,0 +1,159 @@
+body {
+    text-align: center;
+}
+
+
+
+h1 {
+	font-family: cursive;
+    font-weight: 300;
+    color: darkcyan;
+}
+
+
+
+.score-panel {
+	font-size: 1.5em;
+	font-family: cursive;
+    font-weight: 300;
+    color: darkcyan;
+	/*font-weight: bold;*/
+	
+}
+
+img {
+	height: 40px;
+	width: 30px;
+}
+
+.win-img {
+	height: 150px;
+	width: 150px;
+}
+
+
+
+.score-panel .hearts {
+    margin: 0;
+    padding: 0;
+    /*display: inline-block;*/
+    /*margin: 0 2em 0 0;*/
+}
+
+.score-panel .hearts li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+/*Styles for the Win modal*/
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: visible;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: 'brush script mt';
+    font-size: 1.5em;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.modal-button {
+    color:darkcyan;
+    font-family: 'brush script mt';
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/*Styles for the modalLoose*/
+.modalLoose {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modalLoose-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: 'brush script mt';
+    font-size: 1.5em;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.modal-buttonLoose {
+    color:darkcyan;
+    font-family: 'brush script mt';
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.close-buttonLoose {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-buttonLoose:hover {
+    background-color: darkgray;
+}
+.show-modalLoose {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

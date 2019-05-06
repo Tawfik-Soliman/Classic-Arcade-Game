@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Classic Arcade Game</h1>
+		<!-- Adding Score panel -->
+		<div class ="score-panel">
+			<!-- <span>Lives</span> -->
+			<span>
+				<ul class="hearts"> <!-- Every heart is a player life -->
+					<li><img src="images/heart.png"></li>
+					<li><img src="images/heart.png"></li>
+					<li><img src="images/heart.png"></li>
+					<li><img src="images/heart.png"></li>
+					<li><img src="images/heart.png"></li>
+				</ul>
+			</span>
+			Wins: <!-- Number of wins -->
+			<span class="wins">0</span>
+			/5  <!-- you have 5 lives -->
+		</div>
+	</header>
+	<div class="modal"> <!-- Adding Win Modal -->
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h1>Congratulations</h1>
+            <p>You Win</p>
+            <img class="win-img" src="images/winner.png">
+            <p>
+                <button class="modal-button" onclick="location.reload();">Play Again</button> <!-- play again button -->
+            </p>
+        </div>
+    </div>
+    <div class="modalLoose"> <!-- Adding Loose Modal -->
+        <div class="modalLoose-content">
+            <span class="close-buttonLoose">×</span>
+            <h1>It's Sad</h1>
+            <p>Try Again</p>
+            <img class="win-img" src="images/sad.png">
+            <p>
+                <button class="modal-buttonLoose" onclick="location.reload();">Play Again</button> <!-- play again button -->
+            </p>
+        </div>
+    </div>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>
