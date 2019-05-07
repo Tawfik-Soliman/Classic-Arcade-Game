@@ -1,10 +1,10 @@
 // Enemies our player must avoid
-var Enemy = function(x,y,s) {
+const Enemy = function(x,y,speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x=x;   // x-position
     this.y=y;   // y-position
-    this.s=s;   // speed
+    this.speed=speed;   // speed
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -18,7 +18,7 @@ Enemy.prototype.update = function(dt) {
     // all computers.
     if (this.x < 500) { // enemy exit the canvas
 
-    this.x += this.s * dt; // new enemy position with dt multipled in enemy speed
+    this.x += this.speed * dt; // new enemy position with dt multipled in enemy speed
     }
     else {
         this.x =-100; // Enemy enter the canvas
@@ -82,7 +82,7 @@ class Player {
                 winCounter.innerText = this.wins;
                 this.reset(); // reset player
                 allEnemies.forEach(function(enemy) { // increase the speed of enemy with every win
-                enemy.s *= 1.2;
+                enemy.speed *= 1.2;
                 });
 
                 switch(this.wins) { // change player image with every win
@@ -120,7 +120,7 @@ class Player {
     }
 
     handleInput(key){
-        if (player.wins <5 && player.lives!==0) { // keys stop when lives are out or player win
+        if (this.wins <5 && this.lives!==0) { // keys stop when lives are out or player win
         
             switch(key) {
                 case 'left':
